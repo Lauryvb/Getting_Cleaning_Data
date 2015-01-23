@@ -9,7 +9,7 @@ subjects_test = read.table('./UCI HAR Dataset/test/subject_test.txt')
 activity_labels = read.table('./UCI HAR Dataset/activity_labels.txt')
 features = read.table('./UCI HAR Dataset/features.txt')
 
-# organising the data train
+# organizing the train data
 names(y_train) = 'Activity'
 y_train$Activity <-factor(y_train$Activity)
 levels(y_train$Activity) <- activity_labels$V2
@@ -19,7 +19,7 @@ group = rep(1, nrow(train))
 train$group <- group
 train = cbind(train, x_train)
 
-# organsing the data test
+# organizing the test data
 names(y_test) = 'Activity'
 y_test$Activity <-factor(y_test$Activity)
 levels(y_test$Activity) <- activity_labels$V2
