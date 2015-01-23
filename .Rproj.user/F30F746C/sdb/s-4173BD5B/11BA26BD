@@ -1,0 +1,17 @@
+{
+    "contents" : "run_analysis <- function() {\n# reading of the files\ny_train = read.table('./UCI HAR Dataset/train/y_train.txt')\nx_train = read.table('./UCI HAR Dataset/train/X_train.txt')\ny_test = read.table('./UCI HAR Dataset/test/y_test.txt')\nx_test = read.table('./UCI HAR Dataset/test/X_test.txt')\nsubjects_train = read.table('./UCI HAR Dataset/train/subject_train.txt')\nsubjects_test = read.table('./UCI HAR Dataset/test/subject_test.txt')\nactivity_labels = read.table('./UCI HAR Dataset/activity_labels.txt')\nfeatures = read.table('./UCI HAR Dataset/features.txt')\n\n# organizing the train data\nnames(y_train) = 'Activity'\ny_train$Activity <-factor(y_train$Activity)\nlevels(y_train$Activity) <- activity_labels$V2\ntrain <- data.frame(subjects = subjects_train$V1, Activity = y_train$Activity)\nnames(x_train) <- features$V2\ngroup = rep(1, nrow(train))\ntrain$group <- group\ntrain = cbind(train, x_train)\n\n# organizing the test data\nnames(y_test) = 'Activity'\ny_test$Activity <-factor(y_test$Activity)\nlevels(y_test$Activity) <- activity_labels$V2\ntest <- data.frame(subjects = subjects_test$V1, Activity = y_test$Activity)\nnames(x_test) <- features$V2\ngroup = rep(2, nrow(test))\ntest$group <- group\ntest = cbind(test, x_test)\n\nalldata = rbind(train, test)\nalldata$group <- factor(alldata$group)\nlevels(alldata$group) <- c('train', 'test')\n\n# take only the mean and std measurment\nmeans_index <- grep('mean', features$V2) \nstds_index <- grep('std', features$V2) \nindex <- sort(c(means_index, stds_index)) + 3\nindex <- c(1,2,3,index)\ndata_mean_std <- alldata[,index]\n\n# calculating the mean\nnr <- ncol(data_mean_std)\nempty <- data_mean_std[1,]\naverage_data <- empty[-1,-3]\n\nfor (s in 1:length(unique(data_mean_std$subjects))){\n    tmp1 <- subset(data_mean_std, data_mean_std$subjects == s)\n      for(a in 1:length(unique(tmp1$Activity))){\n        A <- activity_labels[a,2]\n        tmp2 <- subset(tmp1, tmp1$Activity == A)\n        means <- colMeans(tmp2[,4:nr])\n        tmp_data <- data.frame(Subject_Number=s,Activity = A,t(means))\n        average_data =  rbind(average_data, tmp_data) \n      }\n  }\n\nwrite.table(average_data, 'average_data.txt', row.name=FALSE)\n\naverage_data\n\n}\n",
+    "created" : 1421922780492.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "291875953",
+    "id" : "11BA26BD",
+    "lastKnownWriteTime" : 1422017839,
+    "path" : "~/R/Coursera/GettingCleaningData/run_analysis.R",
+    "project_path" : "run_analysis.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

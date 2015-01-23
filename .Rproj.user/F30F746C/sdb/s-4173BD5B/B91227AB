@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1421926142992.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B91227AB",
+    "lastKnownWriteTime" : 578055781,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "data_mean_std",
+        "contentUrl" : "content?title=data_mean_std&file=e823c789c29a43bbb49ed90f6554270c.htm",
+        "displayedObservations" : "1000",
+        "displayedVariables" : 82,
+        "totalObservations" : "10299",
+        "variables" : "82"
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

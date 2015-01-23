@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1421931550659.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B2B1ADFA",
+    "lastKnownWriteTime" : 1701603686,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "tmp1",
+        "contentUrl" : "content?title=tmp1&file=926b009b16904478ad9c03a602973e3a.htm",
+        "displayedObservations" : 347,
+        "displayedVariables" : 82,
+        "totalObservations" : 347,
+        "variables" : 82
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

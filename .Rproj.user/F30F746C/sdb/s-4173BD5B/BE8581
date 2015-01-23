@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1421932553327.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "BE8581",
+    "lastKnownWriteTime" : 895628133,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "reduced_data",
+        "contentUrl" : "content?title=reduced_data&file=bde2f50be9254759a27de3b5b49df028.htm",
+        "displayedObservations" : 180,
+        "displayedVariables" : 81,
+        "totalObservations" : 180,
+        "variables" : 81
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

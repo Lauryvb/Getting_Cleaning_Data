@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1421933430687.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "702165C8",
+    "lastKnownWriteTime" : 1681471586,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "average_data",
+        "contentUrl" : "content?title=average_data&file=dc841ef1333d432092ddb89da71db2d1.htm",
+        "displayedObservations" : 180,
+        "displayedVariables" : 81,
+        "totalObservations" : 180,
+        "variables" : 81
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

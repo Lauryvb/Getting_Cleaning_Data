@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1421931927920.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "EB4F52D",
+    "lastKnownWriteTime" : 1717658980,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "activity_labels",
+        "contentUrl" : "content?title=activity_labels&file=4a25eda77f3a46a1a3f0deaf718ecde5.htm",
+        "displayedObservations" : 6,
+        "displayedVariables" : 2,
+        "totalObservations" : 6,
+        "variables" : 2
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
